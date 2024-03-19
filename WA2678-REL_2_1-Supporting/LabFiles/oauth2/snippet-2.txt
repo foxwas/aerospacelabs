@@ -1,0 +1,4 @@
+.csrf(c -> c
+         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+    )
+    .logout(log -> log.logoutSuccessUrl("/").permitAll())

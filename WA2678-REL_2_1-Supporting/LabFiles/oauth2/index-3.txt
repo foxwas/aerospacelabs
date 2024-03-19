@@ -1,0 +1,10 @@
+<script type="text/javascript">
+    $(".unauthenticated").show()
+    $(".authenticated").hide()
+
+    $.get("/user", function(data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
